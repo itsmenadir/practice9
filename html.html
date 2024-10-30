@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Task 4 -->
+<body> 
+    <div id="progress-container" style="width: 100%; background-color: #f3f3f3; border: 1px solid #000;">
+        <div id="progress-bar" style="width: 0%; height: 20px; background-color: #4caf50;"></div>
+      </div>
+      <button id="updateProgress">Complete Task</button>
+      
+      <script>
+        let progress = 0;
+        const progressBar = document.getElementById('progress-bar');
+        const button = document.getElementById('updateProgress');
+      
+        button.addEventListener('click', () => {
+          if (progress < 100) {
+            progress += 10; // Increments by 10%
+            progressBar.style.width = `${progress}%`;
+            progressBar.textContent = `${progress}%`;
+          }
+        });
+      </script>
+</body>
+</html>
